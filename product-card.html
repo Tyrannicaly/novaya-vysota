@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.js"></script>
+    <title>Карточка товара</title>
+</head>
+
+<body>
+
+    <div class="color-block--primary">
+
+        <div>
+            <header class="header">
+
+                <div class="header__desktop">
+                    <div class="header__desktop-cover"></div>
+                    <div class="header__desktop-cover-scroll"></div>
+                    <div class="header__wrapper sp-b-burgundy">
+                        <div class="container">
+                            <div class="col">
+
+                                <div class="header__top sp-v-dark-purple">
+
+                                    <div class="header__contact">
+                                        <p class="font-t1 f-w-medium color--primary">Отдел продаж <a
+                                                style="padding-left: 16px;" class="color--primary"
+                                                href="mailto:zapros@zavodnv.ru"
+                                                style="border-bottom: 1px solid #303030;">zapros@zavodnv.ru</a></p>
+                                        <div class="header__v-line"></div>
+                                        <a class="font-t1 f-w-medium color--primary" href="tel:+78003337989">8 800 333
+                                            7989</a>
+                                    </div>
+
+                                    <ul>
+                                        <li><a class="font-t1 f-w-medium color--primary" href="">О компании</a></li>
+                                        <li><a class="font-t1 f-w-medium color--primary" href="">Клиентам</a></li>
+                                        <li><a class="font-t1 f-w-medium color--primary" href="">Медиацентр</a></li>
+                                        <li><a class="font-t1 f-w-medium color--primary" href="">Закупки</a></li>
+                                        <li><a class="font-t1 f-w-medium color--primary" href="">Контакты</a></li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="header__main sp-t-light-blue">
+
+                                    <a href="/" class="header__logo-desk">
+                                        <!-- <div class="header__logo-desk"></div> -->
+                                    </a>
+
+                                    <div class="header__average">
+
+                                        <div class="button-block">
+                                            <a href="/">
+                                                <div class="button-block__transparent-small">
+                                                    <p class="font-t1">Специальные решения</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="header__ctoggleButton">
+                                            <div class="button-block">
+                                                <a href="/">
+                                                    <div class="button-block__small-list">
+                                                        <div class="button-block__icon"></div>
+
+                                                        <p class="font-t1 color--white">Продукция</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <input class="header__toggle" type="checkbox" />
+                                        </div>
+
+                                        <div class="header__search-container">
+                                            <input type="text" class="header__search-input font-t1"
+                                                placeholder="Поиск по сайту" oninput="toggleIcon(this)">
+                                            <div class="header__search-icon" onclick="clearInput()"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="header__right">
+
+                                        <div class="header__icons">
+                                            <div class="header__comparison"></div>
+                                            <div class="header__basket">
+                                                <div class="item-count font-cap">2</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="button-block">
+                                            <a href="#form">
+                                                <div class="button-block__red-small">
+                                                    <p class="font-t1 color--white">Задать вопрос</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="header__catalog">
+
+                            <div style="padding-top: 128px;">
+                                <div class="line"></div>
+                            </div>
+
+                            <div class="container">
+                                <div class="col">
+                                    <div class="header__catalog-block sp-t-purple">
+                                        <div class="header__menu-bottom">
+
+                                            <div class="header__category-block">
+
+                                                <div class="header__category-item" data-id="1">
+                                                    <a href="/serial-production.html">
+                                                        <h4 class="font-h4">Серийная продукция</h4>
+                                                    </a>
+                                                    <!-- <h4 class="font-h4">Серийная продукция</h4> -->
+                                                    <!-- <ul class="header__subcategory-list">
+                                                        <li class="sp-t-yellow"></li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="1">Стремянки</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="2">Лестницы</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="4">Трансформеры</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="5">Вышки-туры</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="5">Помосты, малярные столы</li>
+                                                    </ul> -->
+                                                </div>
+
+                                                <div class="header__category-item" data-id="2">
+                                                    <a href="#">
+                                                        <h4 class="font-h4">Продукция по направлениям</h4>
+                                                    </a>
+                                                    <!-- <ul class="header__subcategory-list">
+                                                        <li class="sp-t-yellow"></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Ж/д транспорт</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Авиатранспорт</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Автотранспорт</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Нефтегазовая отрасль</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Строительное оборудование</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Склады</a></li>
+                                                    </ul> -->
+                                                </div>
+
+                                                <div class="header__category-item">
+                                                    <a href="#">
+                                                        <h4 class="font-h4">Специальные решения</h4>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="header__main-menu-block">
+
+                                                <div class="header__main-menu-item" data-id="1">
+                                                    <a class="font-s color--secondary" href="#">Стремянки</a>
+                                                    <a class="font-s color--secondary" href="/catalog.html">Лестницы</a>
+                                                    <a class="font-s color--secondary" href="#">Трансформеры</a>
+                                                    <a class="font-s color--secondary" href="#">Вышки-туры</a>
+                                                    <a class="font-s color--secondary" href="#">Помосты, малярные
+                                                        столы</a>
+                                                </div>
+
+                                                <div class="header__main-menu-item" data-id="2">
+                                                    <a class="font-s color--secondary" href="#">Ж/д транспорт</a>
+                                                    <a class="font-s color--secondary" href="#">Авиатранспорт</a>
+                                                    <a class="font-s color--secondary" href="#">Автотранспорт</a>
+                                                    <a class="font-s color--secondary" href="#">Нефтегазовая отрасль</a>
+                                                    <a class="font-s color--secondary" href="#">Строительное
+                                                        оборудование</a>
+                                                    <a class="font-s color--secondary" href="#">Склады</a>
+                                                </div>
+
+                                                <!-- <div class="header__main-menu-item" data-id="3">
+                                                    <a class="font-s color--secondary" href="">Бытовые</a>
+                                                    <a class="font-s color--secondary" href="">Профессиональные</a>
+                                                    <a class="font-s color--secondary" href="">Индустриальные</a>
+                                                </div>
+    
+                                                <div class="header__main-menu-item" data-id="4">
+                                                    <a class="font-s color--secondary" href="">Бытовые</a>
+                                                    <a class="font-s color--secondary" href="">Профессиональные</a>
+                                                    <a class="font-s color--secondary" href="">Индустриальные</a>
+                                                </div>
+    
+                                                <div class="header__main-menu-item" data-id="5">
+                                                    <a class="font-s color--secondary" href="">Бытовые</a>
+                                                    <a class="font-s color--secondary" href="">Профессиональные</a>
+                                                    <a class="font-s color--secondary" href="">Индустриальные</a>
+                                                </div>
+    
+                                                <div class="header__main-menu-item" data-id="6">
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                </div>
+    
+                                                <div class="header__main-menu-item" data-id="7">
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                </div>
+    
+                                                <div class="header__main-menu-item" data-id="8">
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                </div> -->
+
+                                            </div>
+
+                                        </div>
+                                        <div class="header__catalog-promo">
+                                            <div class="header__image">
+                                                <img src="/assets/image/header_catalog_promo.jpg" alt="">
+                                            </div>
+                                            <div class="button-block">
+                                                <a href="/">
+                                                    <div class="button-block__white-large">
+                                                        <p class="font-t1">Подробнее</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="line"></div>
+                            </div>
+
+                            <div class="header__catalog-bottom">
+                                <div class="header__image">
+                                    <img src="/assets/image/header_catalog_bottom.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-mobile color-block--primary">
+                    <div class="header-mobile__wrapper">
+
+                        <div class="container">
+                            <div class="col">
+                                <div class="header-mobile__top sp-v-blue">
+                                    <div class="header-mobile__image">
+                                        <a href="/">
+                                            <img src="/assets/icon/header_logo_mobile.svg" width="145" height="40"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                    <div class="header-mobile__top-btn"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header-mobile__catalog">
+                            <div class="header-mobile__overflow">
+
+                                <div class="header-mobile__menu">
+                                    <div class="header-mobile__menu-ul">
+                                        <a href="#">
+                                            <p class="font-t1">О компании</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Клиентам</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Медиацентр</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Закупки</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Контакты</p>
+                                        </a>
+                                    </div>
+                                    <div class="header-mobile__contact">
+                                        <a class="font-t1" href="mailto:zapros@zavodnv.ru;">zapros@zavodnv.ru</a>
+                                        <a class="font-t1" href="tel:+78003337989;">8 800 333 7989</a>
+                                    </div>
+                                </div>
+
+                                <div class="header-mobile__menu-one">
+
+                                    <div class="header-mobile__link-icon sp-b-yellow" data-id="1">
+                                        <p class="font-h4">Специальные решения</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.54545 11.3333H16.1377L14.3416 9.13804C14.1286 8.87772 14.1286 8.45559 14.3416 8.19523C14.5546 7.93492 14.9 7.93492 15.113 8.19523L17.8402 11.5286C18.0533 11.7889 18.0533 12.211 17.8402 12.4714L15.113 15.8047C15.0064 15.9349 14.8669 16 14.7273 16C14.5877 16 14.4481 15.9349 14.3416 15.8047C14.1286 15.5444 14.1286 15.1223 14.3416 14.8619L16.1377 12.6667H6.54545C6.24422 12.6667 6 12.3682 6 12C6 11.6318 6.24422 11.3333 6.54545 11.3333Z"
+                                                fill="#303030" />
+                                        </svg>
+                                    </div>
+                                    <div class="line"></div>
+
+                                    <div class="header-mobile__link-icon sp-v-yellow" data-id="2">
+                                        <p class="font-h4">Продукция по направлениям</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.54545 11.3333H16.1377L14.3416 9.13804C14.1286 8.87772 14.1286 8.45559 14.3416 8.19523C14.5546 7.93492 14.9 7.93492 15.113 8.19523L17.8402 11.5286C18.0533 11.7889 18.0533 12.211 17.8402 12.4714L15.113 15.8047C15.0064 15.9349 14.8669 16 14.7273 16C14.5877 16 14.4481 15.9349 14.3416 15.8047C14.1286 15.5444 14.1286 15.1223 14.3416 14.8619L16.1377 12.6667H6.54545C6.24422 12.6667 6 12.3682 6 12C6 11.6318 6.24422 11.3333 6.54545 11.3333Z"
+                                                fill="#303030" />
+                                        </svg>
+                                    </div>
+                                    <div class="line"></div>
+
+                                    <a href="#" class="header-mobile__link-icon sp-v-yellow">
+                                        <p class="font-h4">Серийная продукция</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.54545 11.3333H16.1377L14.3416 9.13804C14.1286 8.87772 14.1286 8.45559 14.3416 8.19523C14.5546 7.93492 14.9 7.93492 15.113 8.19523L17.8402 11.5286C18.0533 11.7889 18.0533 12.211 17.8402 12.4714L15.113 15.8047C15.0064 15.9349 14.8669 16 14.7273 16C14.5877 16 14.4481 15.9349 14.3416 15.8047C14.1286 15.5444 14.1286 15.1223 14.3416 14.8619L16.1377 12.6667H6.54545C6.24422 12.6667 6 12.3682 6 12C6 11.6318 6.24422 11.3333 6.54545 11.3333Z"
+                                                fill="#303030" />
+                                        </svg>
+                                    </a>
+                                    <div class="line"></div>
+
+                                    <a href="#" class="header-mobile__image">
+                                        <img src="/assets/image/header_catalog_promo.jpg" alt="">
+                                    </a>
+
+                                    <div class="button-block">
+                                        <a href="#">
+                                            <div class="button-block__red-large">
+                                                <p class="font-t1 color--white">Задать вопрос</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="header-mobile__menu-two">
+                                    <div class="header-mobile__menu-child" data-id="1">
+                                        <div class="sp-b-purple">
+                                            <svg class="header-mobile__menu-close" width="24" height="16"
+                                                viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M22.9091 9.33335L3.72461 9.33335L7.31683 13.7239C7.74286 14.2446 7.74286 15.0888 7.31683 15.6095C6.89086 16.1302 6.2001 16.1302 5.77406 15.6095L0.319528 8.94285C-0.106508 8.42223 -0.106507 7.57796 0.319528 7.05725L5.77407 0.390575C5.98716 0.13022 6.26628 -2.71907e-06 6.54548 -2.67025e-06C6.82468 -2.62143e-06 7.10388 0.13022 7.31683 0.390576C7.74286 0.911199 7.74286 1.75547 7.31683 2.27618L3.72461 6.66667L22.9091 6.66668C23.5116 6.66668 24 7.26366 24 8.00001C24 8.73637 23.5116 9.33335 22.9091 9.33335Z"
+                                                    fill="#303030" />
+                                            </svg>
+                                        </div>
+                                        <a class="font-s" href="#">Стремянки</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="/catalog.html">Лестницы</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Трансформеры</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Вышки-туры</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Помосты, малярные столы</a>
+                                    </div>
+                                    <div class="header-mobile__menu-child" data-id="2">
+                                        <div class="sp-b-purple">
+                                            <svg class="header-mobile__menu-close" width="24" height="16"
+                                                viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M22.9091 9.33335L3.72461 9.33335L7.31683 13.7239C7.74286 14.2446 7.74286 15.0888 7.31683 15.6095C6.89086 16.1302 6.2001 16.1302 5.77406 15.6095L0.319528 8.94285C-0.106508 8.42223 -0.106507 7.57796 0.319528 7.05725L5.77407 0.390575C5.98716 0.13022 6.26628 -2.71907e-06 6.54548 -2.67025e-06C6.82468 -2.62143e-06 7.10388 0.13022 7.31683 0.390576C7.74286 0.911199 7.74286 1.75547 7.31683 2.27618L3.72461 6.66667L22.9091 6.66668C23.5116 6.66668 24 7.26366 24 8.00001C24 8.73637 23.5116 9.33335 22.9091 9.33335Z"
+                                                    fill="#303030" />
+                                            </svg>
+                                        </div>
+                                        <a class="font-s" href="#">Ж/д транспорт</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Авиатранспорт</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Автотранспорт</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Нефтегазовая отрасль</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Строительное оборудование</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Склады</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <div class="header-padding"></div>
+        </div>
+
+        <section class="main-card sp-b-green">
+            <div class="container">
+                <div class="main-card__wrapper">
+
+                    <div class="col-5 col-lg-12 col-md-6 col-sm-3">
+                        <div class="main-card__slider-block">
+                            <div class="swiper mySwiper-main-card2 d-none-sm">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_1.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_2.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_3.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_4.jpg" />
+                                    </div>
+                                </div>
+                                <!-- <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div> -->
+                            </div>
+
+                            <div thumbsSlider="" class="swiper mySwiper-main-card">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_1.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_2.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_3.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_4.jpg" />
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popup для слайдера -->
+                    <div id="imagePopup" class="popup-slider" style="display:none;">
+                        <div class="swiper mySwiper-popup">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="/assets/image/main_card_green_1.jpg" /></div>
+                                <div class="swiper-slide"><img src="/assets/image/main_card_green_2.jpg" /></div>
+                                <div class="swiper-slide"><img src="/assets/image/main_card_green_3.jpg" /></div>
+                                <div class="swiper-slide"><img src="/assets/image/main_card_green_4.jpg" /></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <span class="close-popup" onclick="closePopup()">&times;</span>
+                    </div>
+
+                    <div class="col-1 d-none-lg"></div>
+
+                    <div class="col-6 col-lg-8 col-md-6 col-sm-3">
+                        <div class="main-card__rating-block">
+                            <div class="main-card__star-rating">
+                                <span class="main-card__star color--red" data-rating="1">&#9733;</span>
+                                <span class="main-card__star color--red" data-rating="2">&#9733;</span>
+                                <span class="main-card__star color--red" data-rating="3">&#9733;</span>
+                                <span class="main-card__star color--red" data-rating="4">&#9733;</span>
+                                <span class="main-card__star" data-rating="5">&#9733;</span>
+                            </div>
+                        </div>
+                        <p class="font-h5 color--secondary sp-t-blue">Артикул: <span>2948d821eh</span></p>
+                        <h1 class="font-h4 sp-t-burgundy f-w-medium">Профессиональная анодированная стремянка со
+                            ступенями 130 мм и органайзером NV 3118А</h1>
+                        <div class="d-none-md">
+                            <p class="font-s sp-t-burgundy">Цена</p>
+                            <p class="font-h3">от 12 000 ₽</p>
+                        </div>
+                        <p class="font-t2 color--secondary sp-t-burgundy sp-b-grey">Рабочая высота</p>
+                        <select class="main-card__select font-t1 color-block--primary" name="">
+                            <option class="main-card__option font-t1" value="">1075 см</option>
+                            <option class="main-card__option font-t1" value="">1175 см</option>
+                            <option class="main-card__option font-t1" value="">1275 см</option>
+                            <option class="main-card__option font-t1" value="">1375 см</option>
+                        </select>
+                        <p class="font-t2 color--secondary sp-t-burgundy sp-b-grey">Цвет изделия</p>
+                        <div class="main-card__block-colors">
+                            <div class="main-card__item-color" data-id="blue"></div>
+                            <div class="main-card__item-color" data-id="red"></div>
+                            <div class="main-card__item-color" data-id="orange"></div>
+                            <div class="main-card__item-color" data-id="violet"></div>
+                            <div class="main-card__item-color" data-id="green"></div>
+                        </div>
+                        <p class="font-h5 sp-t-burgundy">Название бренда</p>
+                        <p class="font-s color--secondary sp-t-dark-purple">Краткое продающее описание товара (УТП) в
+                            несколько строчек раскрывающее приемущества товара</p>
+                        <div class="main-card__bottom sp-t-burgundy">
+                            <div class="main-card__price-mobile">
+                                <p class="font-s">Цена</p>
+                                <p class="font-h3">от 12 000 ₽</p>
+                            </div>
+                            <div class="main-card__bottom-links">
+                                <div class="button-block">
+                                    <a href="/">
+                                        <div class="button-block__red-large">
+                                            <p class="font-t1 color--white">Заказать</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="main-card__icon-comparison"></div>
+                                <a href="#" class="d-none-sm">
+                                    <!-- <div class="main-card__icon-print"></div> -->
+                                    <svg width="48" height="48" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" fill="white"
+                                            fill-opacity="0.2" />
+                                        <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="#333333" />
+                                        <g clip-path="url(#clip0_1787_11133)">
+                                            <path
+                                                d="M21.7937 11.8H21.1404V10.2367C21.1404 9.56 20.5804 9 19.9037 9H12.1104C11.4337 9 10.8737 9.56 10.8737 10.2367V11.8H10.2204C9.54375 11.8 9.00708 12.3367 9.00708 13.0133V18.7767C9.00708 19.43 9.54375 19.9667 10.2204 19.9667H10.8737V21.67C10.8737 22.3933 11.4571 23 12.2037 23H19.8337C20.5571 23 21.1637 22.4167 21.1637 21.67V19.9667H21.8171C22.4704 19.9667 23.0304 19.43 23.0304 18.7533V13.0133C23.0071 12.3367 22.4704 11.8 21.7937 11.8ZM11.8071 10.2367C11.8071 10.0733 11.9471 9.93333 12.1104 9.93333H19.8804C20.0671 9.93333 20.2071 10.0733 20.2071 10.2367V11.8H11.8071V10.2367ZM20.2071 21.67C20.2071 21.88 20.0437 22.0667 19.8104 22.0667H12.2037C11.9937 22.0667 11.8071 21.9033 11.8071 21.67V15.3H20.2071V21.67Z"
+                                                fill="#4F4F4F" />
+                                            <path
+                                                d="M13.4403 17.4H18.5736C18.8303 17.4 19.0403 17.19 19.0403 16.9333C19.0403 16.6767 18.8303 16.4667 18.5736 16.4667H13.4403C13.1836 16.4667 12.9736 16.6767 12.9736 16.9333C12.9736 17.19 13.1836 17.4 13.4403 17.4Z"
+                                                fill="white" />
+                                            <path
+                                                d="M13.4403 20.9H16.007C16.2636 20.9 16.4736 20.69 16.4736 20.4333C16.4736 20.1767 16.2636 19.9667 16.007 19.9667H13.4403C13.1836 19.9667 12.9736 20.1767 12.9736 20.4333C12.9736 20.69 13.1836 20.9 13.4403 20.9Z"
+                                                fill="white" />
+                                            <path
+                                                d="M13.4403 19.15H18.5736C18.8303 19.15 19.0403 18.94 19.0403 18.6833C19.0403 18.4267 18.8303 18.2167 18.5736 18.2167H13.4403C13.1836 18.2167 12.9736 18.4267 12.9736 18.6833C12.9736 18.94 13.1836 19.15 13.4403 19.15Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1787_11133">
+                                                <rect width="24" height="24" fill="white" transform="translate(4 4)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <a class="sticky-link color-block--primary" href="#specification">
+            <div class="container">
+                <div class="col">
+                    <div class="sticky-link__block">
+                        <div class="sticky-link__li"></div>
+                        <h2 class="font-h3">Спецификация</h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <section class="specification-card sp-t-mint sp-b-green" id="specification">
+            <div class="container">
+
+                <div class="col-6 col-lg-7 col-md-6 col-sm-3">
+                    <div class="specification-card__image">
+                        <img src="/assets/image/specification_card_image.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="specification-card__table sp-t-mint">
+                        <div class="specification-card__table-row">
+                            <div class="specification-card__table-item font-t1 color--secondary">Артикул</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">Ступени</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">A, м</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">B, м</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">C, м</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">D, м</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">X, м</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">Y, м</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">Z, м</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">E, м</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">F, м</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">B1, м</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">B2, м</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">Вес, кг</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">Цвет</div>
+                            <div class="specification-card__table-item font-t1 color--secondary d-flex-center">Купить
+                            </div>
+                            <div class="specification-card__table-item-2 font-t1 color--secondary">Сравнить</div>
+                        </div>
+
+                        <div class="specification-card__table-row color--bold">
+                            <div class="specification-card__table-item font-t1 color--secondary">5115104</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1х4</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">3</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,63</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,76</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,98</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,15</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,76</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,47</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,29</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,47</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,00</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,64</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">6,10</div>
+                            <div class="specification-card__table-item font-t1 color--secondary not--bold">
+                                <div class="table-item-colors">
+                                    <div class="table-item-color">
+                                        <span style="background: #bfc5cd"></span>
+                                        Металик
+                                    </div>
+
+                                    <div class="table-item-color-box">
+                                        <div class="table-item-color-inner" data-value="1222">
+                                            <span style="background:#bfc5cd"></span>
+                                            Металик
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="specification-card__table-item font-t1 color--secondary d-flex-center">
+                                <a href="">
+                                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="26" height="26" rx="13" fill="#4F4F4F" />
+                                        <path
+                                            d="M12.25 16.85C11.8356 16.85 11.5 17.1633 11.5 17.55C11.5 17.9364 11.8356 18.25 12.25 18.25C12.6644 18.25 13 17.9364 13 17.55C13 17.1633 12.6644 16.85 12.25 16.85ZM10.7384 10.55L9.80275 7.75H7.375C7.168 7.75 7 7.9068 7 8.1C7 8.2932 7.168 8.45 7.375 8.45H9.25L10.0037 10.55H10L10.75 14.75C10.75 15.5231 11.4216 16.15 12.25 16.15H16.375C17.2034 16.15 17.875 15.5231 17.875 14.75L19 10.55H10.7384ZM16 16.85C15.5856 16.85 15.25 17.1633 15.25 17.55C15.25 17.9364 15.5856 18.25 16 18.25C16.4144 18.25 16.75 17.9364 16.75 17.55C16.75 17.1633 16.4144 16.85 16 16.85Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="specification-card__table-item-2 font-t1 color--secondary">
+                                <div class="button-block">
+                                    <a href="/">
+                                        <div class="button-block__mini-small">
+                                            <p class="font-t1 color--white">В сравнении</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="specification-card__table-row">
+                            <div class="specification-card__table-item font-t1 color--secondary">5115104</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1х4</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">3</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,63</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,76</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,98</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,15</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,76</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,47</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,29</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,47</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,00</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,64</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">6,10</div>
+                            <div class="specification-card__table-item font-t1 color--secondary not--bold">
+                                <div class="table-item-colors">
+                                    <div class="table-item-color">
+                                        <span style="background: #bfc5cd"></span>
+                                        Металик
+                                    </div>
+
+                                    <div class="table-item-color-box">
+                                        <div class="table-item-color-inner" data-value="1222">
+                                            <span style="background:#bfc5cd"></span>
+                                            Металик
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="specification-card__table-item font-t1 color--secondary d-flex-center">
+                                <a href="">
+                                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="26" height="26" rx="13" fill="#4F4F4F" />
+                                        <path
+                                            d="M12.25 16.85C11.8356 16.85 11.5 17.1633 11.5 17.55C11.5 17.9364 11.8356 18.25 12.25 18.25C12.6644 18.25 13 17.9364 13 17.55C13 17.1633 12.6644 16.85 12.25 16.85ZM10.7384 10.55L9.80275 7.75H7.375C7.168 7.75 7 7.9068 7 8.1C7 8.2932 7.168 8.45 7.375 8.45H9.25L10.0037 10.55H10L10.75 14.75C10.75 15.5231 11.4216 16.15 12.25 16.15H16.375C17.2034 16.15 17.875 15.5231 17.875 14.75L19 10.55H10.7384ZM16 16.85C15.5856 16.85 15.25 17.1633 15.25 17.55C15.25 17.9364 15.5856 18.25 16 18.25C16.4144 18.25 16.75 17.9364 16.75 17.55C16.75 17.1633 16.4144 16.85 16 16.85Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="specification-card__table-item-2 font-t1 color--secondary">
+                                <div class="button-block">
+                                    <a href="/">
+                                        <div class="button-block__mini-small">
+                                            <p class="font-t1 color--white">Сравнить</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="specification-card__table-row">
+                            <div class="specification-card__table-item font-t1 color--secondary">5115104</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1х4</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">3</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,63</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,76</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,98</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,15</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,76</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,47</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,29</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,47</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,00</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,64</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">6,10</div>
+                            <div class="specification-card__table-item font-t1 color--secondary not--bold">
+                                <div class="table-item-colors">
+                                    <div class="table-item-color">
+                                        <span style="background: #bfc5cd"></span>
+                                        Металик
+                                    </div>
+
+                                    <div class="table-item-color-box">
+                                        <div class="table-item-color-inner" data-value="1222">
+                                            <span style="background:#bfc5cd"></span>
+                                            Металик
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="specification-card__table-item font-t1 color--secondary d-flex-center">
+                                <a href="">
+                                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="26" height="26" rx="13" fill="#4F4F4F" />
+                                        <path
+                                            d="M12.25 16.85C11.8356 16.85 11.5 17.1633 11.5 17.55C11.5 17.9364 11.8356 18.25 12.25 18.25C12.6644 18.25 13 17.9364 13 17.55C13 17.1633 12.6644 16.85 12.25 16.85ZM10.7384 10.55L9.80275 7.75H7.375C7.168 7.75 7 7.9068 7 8.1C7 8.2932 7.168 8.45 7.375 8.45H9.25L10.0037 10.55H10L10.75 14.75C10.75 15.5231 11.4216 16.15 12.25 16.15H16.375C17.2034 16.15 17.875 15.5231 17.875 14.75L19 10.55H10.7384ZM16 16.85C15.5856 16.85 15.25 17.1633 15.25 17.55C15.25 17.9364 15.5856 18.25 16 18.25C16.4144 18.25 16.75 17.9364 16.75 17.55C16.75 17.1633 16.4144 16.85 16 16.85Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="specification-card__table-item-2 font-t1 color--secondary">
+                                <div class="button-block">
+                                    <a href="/">
+                                        <div class="button-block__mini-small">
+                                            <p class="font-t1 color--white">Сравнить</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="specification-card__table-row">
+                            <div class="specification-card__table-item font-t1 color--secondary">5115104</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1х4</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">3</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,63</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,76</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,98</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,15</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,76</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,47</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,29</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,47</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,00</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,64</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">6,10</div>
+                            <div class="specification-card__table-item font-t1 color--secondary not--bold">
+                                <div class="table-item-colors">
+                                    <div class="table-item-color">
+                                        <span style="background: #bfc5cd"></span>
+                                        Металик
+                                    </div>
+
+                                    <div class="table-item-color-box">
+                                        <div class="table-item-color-inner" data-value="1222">
+                                            <span style="background:#bfc5cd"></span>
+                                            Металик
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="specification-card__table-item font-t1 color--secondary d-flex-center">
+                                <a href="">
+                                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="26" height="26" rx="13" fill="#4F4F4F" />
+                                        <path
+                                            d="M12.25 16.85C11.8356 16.85 11.5 17.1633 11.5 17.55C11.5 17.9364 11.8356 18.25 12.25 18.25C12.6644 18.25 13 17.9364 13 17.55C13 17.1633 12.6644 16.85 12.25 16.85ZM10.7384 10.55L9.80275 7.75H7.375C7.168 7.75 7 7.9068 7 8.1C7 8.2932 7.168 8.45 7.375 8.45H9.25L10.0037 10.55H10L10.75 14.75C10.75 15.5231 11.4216 16.15 12.25 16.15H16.375C17.2034 16.15 17.875 15.5231 17.875 14.75L19 10.55H10.7384ZM16 16.85C15.5856 16.85 15.25 17.1633 15.25 17.55C15.25 17.9364 15.5856 18.25 16 18.25C16.4144 18.25 16.75 17.9364 16.75 17.55C16.75 17.1633 16.4144 16.85 16 16.85Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="specification-card__table-item-2 font-t1 color--secondary">
+                                <div class="button-block">
+                                    <a href="/">
+                                        <div class="button-block__mini-small">
+                                            <p class="font-t1 color--white">Сравнить</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="specification-card__table-row">
+                            <div class="specification-card__table-item font-t1 color--secondary">5115104</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1х4</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">3</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,63</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,76</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,98</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,15</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,76</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,47</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,29</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,47</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,00</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,64</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">6,10</div>
+                            <div class="specification-card__table-item font-t1 color--secondary not--bold">
+                                <div class="table-item-colors">
+                                    <div class="table-item-color">
+                                        <span style="background: #bfc5cd"></span>
+                                        Металик
+                                    </div>
+
+                                    <div class="table-item-color-box">
+                                        <div class="table-item-color-inner" data-value="1222">
+                                            <span style="background:#bfc5cd"></span>
+                                            Металик
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="specification-card__table-item font-t1 color--secondary d-flex-center">
+                                <a href="">
+                                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="26" height="26" rx="13" fill="#4F4F4F" />
+                                        <path
+                                            d="M12.25 16.85C11.8356 16.85 11.5 17.1633 11.5 17.55C11.5 17.9364 11.8356 18.25 12.25 18.25C12.6644 18.25 13 17.9364 13 17.55C13 17.1633 12.6644 16.85 12.25 16.85ZM10.7384 10.55L9.80275 7.75H7.375C7.168 7.75 7 7.9068 7 8.1C7 8.2932 7.168 8.45 7.375 8.45H9.25L10.0037 10.55H10L10.75 14.75C10.75 15.5231 11.4216 16.15 12.25 16.15H16.375C17.2034 16.15 17.875 15.5231 17.875 14.75L19 10.55H10.7384ZM16 16.85C15.5856 16.85 15.25 17.1633 15.25 17.55C15.25 17.9364 15.5856 18.25 16 18.25C16.4144 18.25 16.75 17.9364 16.75 17.55C16.75 17.1633 16.4144 16.85 16 16.85Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="specification-card__table-item-2 font-t1 color--secondary">
+                                <div class="button-block">
+                                    <a href="/">
+                                        <div class="button-block__mini-small">
+                                            <p class="font-t1 color--white">Сравнить</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="specification-card__table-row">
+                            <div class="specification-card__table-item font-t1 color--secondary">5115104</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1х4</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">3</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,63</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,76</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,98</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,15</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,76</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,47</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,29</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,47</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">1,00</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">0,64</div>
+                            <div class="specification-card__table-item font-t1 color--secondary">6,10</div>
+                            <div class="specification-card__table-item font-t1 color--secondary not--bold">
+                                <div class="table-item-colors">
+                                    <div class="table-item-color">
+                                        <span style="background: #bfc5cd"></span>
+                                        Металик
+                                    </div>
+
+                                    <div class="table-item-color-box">
+                                        <div class="table-item-color-inner" data-value="1222">
+                                            <span style="background:#bfc5cd"></span>
+                                            Металик
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="specification-card__table-item font-t1 color--secondary d-flex-center">
+                                <a href="">
+                                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="26" height="26" rx="13" fill="#4F4F4F" />
+                                        <path
+                                            d="M12.25 16.85C11.8356 16.85 11.5 17.1633 11.5 17.55C11.5 17.9364 11.8356 18.25 12.25 18.25C12.6644 18.25 13 17.9364 13 17.55C13 17.1633 12.6644 16.85 12.25 16.85ZM10.7384 10.55L9.80275 7.75H7.375C7.168 7.75 7 7.9068 7 8.1C7 8.2932 7.168 8.45 7.375 8.45H9.25L10.0037 10.55H10L10.75 14.75C10.75 15.5231 11.4216 16.15 12.25 16.15H16.375C17.2034 16.15 17.875 15.5231 17.875 14.75L19 10.55H10.7384ZM16 16.85C15.5856 16.85 15.25 17.1633 15.25 17.55C15.25 17.9364 15.5856 18.25 16 18.25C16.4144 18.25 16.75 17.9364 16.75 17.55C16.75 17.1633 16.4144 16.85 16 16.85Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="specification-card__table-item-2 font-t1 color--secondary">
+                                <div class="button-block">
+                                    <a href="/">
+                                        <div class="button-block__mini-small">
+                                            <p class="font-t1 color--white">Сравнить</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <a class="sticky-link sticky-link--2 color-block--primary" href="#description">
+            <div class="container">
+                <div class="col">
+                    <div class="sticky-link__block">
+                        <div class="sticky-link__li"></div>
+                        <h2 class="font-h3">Описание</h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <section class="description-card sp-b-green" id="description">
+            <div class="container">
+
+                <div class="col">
+                    <div class="sp-v-mint">
+                        <div class="line"></div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="swiper mySwiper-product-card">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <!-- <div class="col-2 col-md-3 col-sm-3"> -->
+                                <div class="description-card__item">
+                                    <div class="description-card__image">
+                                        <img src="/assets/image/description_card_image.jpg" alt="">
+                                    </div>
+                                    <h3 class="font-s sp-t-dark-purple">Подзаголовок состоящий из двух строк</h3>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+
+                            <div class="swiper-slide">
+                                <!-- <div class="col-2 col-md-3 col-sm-3"> -->
+                                <div class="description-card__item">
+                                    <div class="description-card__image">
+                                        <img src="/assets/image/description_card_image.jpg" alt="">
+                                    </div>
+                                    <h3 class="font-s sp-t-dark-purple">Подзаголовок состоящий из двух строк</h3>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+
+                            <div class="swiper-slide">
+                                <!-- <div class="col-2 col-md-3 col-sm-3"> -->
+                                <div class="description-card__item">
+                                    <div class="description-card__image">
+                                        <img src="/assets/image/description_card_image.jpg" alt="">
+                                    </div>
+                                    <h3 class="font-s sp-t-dark-purple">Подзаголовок состоящий из двух строк</h3>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <ul class="sp-t-mint">
+                        <li class="font-s color--secondary">Ориентация ступеней на обе стороны позволяет работать,
+                            не переставляя стремянку и тем самым экономя время</li>
+                        <li class="font-s color--secondary">Максимальная прочность и надёжность при небольшом весе
+                            изделия</li>
+                        <li class="font-s color--secondary">Легко устанавливается и обеспечивает высокий уровень
+                            комфорта</li>
+                        <li class="font-s color--secondary">Стойки и ступени из экструдированных алюминиевых профилей
+                            увеличенного сечения</li>
+                        <li class="font-s color--secondary">Ступени глубиной 130 мм увеличенной толщины</li>
+                        <li class="font-s color--secondary">Рифлёная поверхность ступеней для безопасного подъёма
+                            и спуска</li>
+                        <li class="font-s color--secondary">Увеличенная площадка 260×350 мм</li>
+                        <li class="font-s color--secondary">Прочное крепление ступеней к боковинам шестью заклёпками для
+                            более высокой устойчивости конструкции</li>
+                        <li class="font-s color--secondary">Прочные страховочные ремни</li>
+                        <li class="font-s color--secondary">Опорные наконечники из прочного пластика для устойчивого
+                            положения</li>
+                        <li class="font-s color--secondary">Компактность при хранении и транспортировке</li>
+                        <li class="font-s color--secondary">Практичность и внимание к каждой детали гарантируют
+                            безопасность работы на любой высоте</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <a class="sticky-link sticky-link--3 color-block--primary" href="#documentation">
+            <div class="container">
+                <div class="col">
+                    <div class="sticky-link__block">
+                        <div class="sticky-link__li"></div>
+                        <h2 class="font-h3">Документация</h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <section class="documentation-card sp-b-green" id="documentation">
+            <div class="container">
+
+                <div class="col">
+                    <div class="sp-v-mint">
+                        <div class="line"></div>
+                    </div>
+                </div>
+
+                <div class="documentation-card__block">
+
+                    <div class="col-4 col-md-3 col-sm-3">
+                        <div class="documentation-card__item color-block--gray-opasity20">
+                            <div class="documentation-card__image">
+                                <img src="/assets/image/documentation_card_image.jpg" width="116" height="163" alt="">
+                            </div>
+                            <div class="documentation-card__info">
+                                <h3 class="font-s">Название документа</h3>
+                                <div class="documentation-card__bottom">
+                                    <p class="font-t2 color--secondary">233 Kb</p>
+                                    <a href="#">
+                                        <div class="documentation-card__icon"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-md-3 col-sm-3">
+                        <div class="documentation-card__item color-block--gray-opasity20">
+                            <div class="documentation-card__image">
+                                <img src="/assets/image/documentation_card_image.jpg" width="116" height="163" alt="">
+                            </div>
+                            <div class="documentation-card__info">
+                                <h3 class="font-s">Название документа</h3>
+                                <div class="documentation-card__bottom">
+                                    <p class="font-t2 color--secondary">233 Kb</p>
+                                    <a href="#">
+                                        <div class="documentation-card__icon"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-md-3 col-sm-3">
+                        <div class="documentation-card__item color-block--gray-opasity20">
+                            <div class="documentation-card__image">
+                                <img src="/assets/image/documentation_card_image.jpg" width="116" height="163" alt="">
+                            </div>
+                            <div class="documentation-card__info">
+                                <h3 class="font-s">Название документа</h3>
+                                <div class="documentation-card__bottom">
+                                    <p class="font-t2 color--secondary">233 Kb</p>
+                                    <a href="#">
+                                        <div class="documentation-card__icon"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <a class="sticky-link sticky-link--4 color-block--primary" href="#accessories">
+            <div class="container">
+                <div class="col">
+                    <div class="sticky-link__block">
+                        <div class="sticky-link__li"></div>
+                        <h2 class="font-h3">Аксессуары и Запчасти</h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <section class="accessories-card sp-b-green" id="accessories">
+            <div class="container">
+
+                <div class="col">
+                    <div class="sp-v-mint">
+                        <div class="line"></div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="swiper mySwiper-product-card">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <!-- <div class="col-2 col-md-3 col-sm-3"> -->
+                                <div class="accessories-card__item">
+                                    <div class="accessories-card__image">
+                                        <img src="/assets/image/accessories_card_image.jpg" alt="">
+                                    </div>
+                                    <h3 class="font-s sp-t-dark-purple">Название аксессуара</h3>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+
+                            <div class="swiper-slide">
+                                <!-- <div class="col-2 col-md-3 col-sm-3"> -->
+                                <div class="accessories-card__item">
+                                    <div class="accessories-card__image">
+                                        <img src="/assets/image/accessories_card_image.jpg" alt="">
+                                    </div>
+                                    <h3 class="font-s sp-t-dark-purple">Название аксессуара</h3>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+
+                            <div class="swiper-slide">
+                                <!-- <div class="col-2 col-md-3 col-sm-3"> -->
+                                <div class="accessories-card__item">
+                                    <div class="accessories-card__image">
+                                        <img src="/assets/image/accessories_card_image.jpg" alt="">
+                                    </div>
+                                    <h3 class="font-s sp-t-dark-purple">Название аксессуара</h3>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <!-- <div class="col-2 col-md-3 col-sm-3"> -->
+                                <div class="accessories-card__item">
+                                    <div class="accessories-card__image">
+                                        <img src="/assets/image/accessories_card_image.jpg" alt="">
+                                    </div>
+                                    <h3 class="font-s sp-t-dark-purple">Название аксессуара</h3>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Собрать -->
+        <a class="sticky-link sticky-link--5 color-block--primary" href="#reviews">
+            <div class="container">
+                <div class="col">
+                    <div class="sticky-link__block">
+                        <div class="sticky-link__li"></div>
+                        <h2 class="font-h3">Отзывы и Вопросы</h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <section class="reviews-card sp-b-green" id="reviews">
+            <div class="container">
+
+                <div class="col">
+                    <div class="sp-v-mint">
+                        <div class="line"></div>
+                        <div class="reviews-card__filter-wrapper sp-v-yellow">
+                            <p class="font-s">63 отзыва</p>
+                            <div class="reviews-card__filter-block">
+                                <div class="custom-select">
+                                    <select class="reviews-filter">
+                                        <option value="score">По оценке</option>
+                                        <option value="date">По дате</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sp-b-dark-blue">
+                            <div class="line"></div>
+                        </div>
+                        <div class="swiper mySwiper-reviews-item sp-b-fuchsia">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="reviews-card__item">
+                                        <div class="reviews-card__top">
+                                            <div>
+                                                <p class="font-t1">Имя фамилия</p>
+                                                <p class="font-t2">25 марта в 13:28</p>
+                                            </div>
+                                            <div class="reviews-card__grade">
+                                                <div class="d-flex-center">
+                                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.54894 1.42705C7.8483 0.505742 9.1517 0.505739 9.45106 1.42705L10.6329 5.06434C10.7668 5.47636 11.1507 5.75532 11.5839 5.75532H15.4084C16.3771 5.75532 16.7799 6.99494 15.9962 7.56434L12.9021 9.81231C12.5516 10.0669 12.405 10.5183 12.5389 10.9303L13.7207 14.5676C14.02 15.4889 12.9656 16.2551 12.1818 15.6857L9.08779 13.4377C8.7373 13.1831 8.2627 13.1831 7.91222 13.4377L4.81815 15.6857C4.03444 16.2551 2.97996 15.4889 3.27931 14.5676L4.46114 10.9303C4.59501 10.5183 4.44835 10.0669 4.09787 9.81231L1.00381 7.56434C0.220092 6.99494 0.622867 5.75532 1.59159 5.75532H5.41606C5.84929 5.75532 6.23324 5.47636 6.36712 5.06434L7.54894 1.42705Z"
+                                                            fill="white" />
+                                                    </svg>
+                                                    <p class="font-t1 color--white">5.0</p>
+                                                </div>
+                                                <p class="font-t1 color--white">Отлично</p>
+                                            </div>
+                                        </div>
+                                        <p class="font-t1 sp-t-light-blue sp-b-burgundy">"Я приобрел стремянку в
+                                            магазине по производству лестниц и остался очень доволен своей покупкой.
+                                            Стремянка оказалась очень удобной и функциональной, идеально подходит для
+                                            использования как в домашних условиях, так и на профессиональном уровне.
+                                            Качество материалов и сборки оставляет только положительные впечатления,
+                                            стремянка крайне надежная и прочная."
+                                            "Магазин предоставил отличный сервис, продавец подробно проконсультировал
+                                            меня по всем возникшим вопросам и помог с выбором оптимальной модели.
+                                            Доставка была осуществлена вовремя, что не может не радовать.
+                                            Клиентоориентированный подход персонала вызывает только приятные эмоции."
+                                            "Один из главных плюсов этой стремянки - ее удобство. Лестница легко
+                                            складывается и занимает минимум места, что особенно важно для моей небольшой
+                                            квартиры. Кроме того, ступени прочно фиксируются, не скрипят и не шатаются,
+                                            что дает ощущение полной безопасности во время использования."
+                                        </p>
+                                        <div class="swiper mySwiper-product-standart">
+                                            <div class="swiper-wrapper">
+
+                                                <div class="swiper-slide">
+                                                    <div class="description-card__item">
+                                                        <div class="description-card__image">
+                                                            <img src="/assets/image/reviews_card_1.jpg" width="144"
+                                                                height="144" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="description-card__item">
+                                                        <div class="description-card__image">
+                                                            <img src="/assets/image/reviews_card_2.jpg" width="144"
+                                                                height="144" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="reviews-card__item">
+                                        <div class="reviews-card__top">
+                                            <div>
+                                                <p class="font-t1">Имя фамилия</p>
+                                                <p class="font-t2">25 марта в 13:28</p>
+                                            </div>
+                                            <div class="reviews-card__grade">
+                                                <div class="d-flex-center">
+                                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.54894 1.42705C7.8483 0.505742 9.1517 0.505739 9.45106 1.42705L10.6329 5.06434C10.7668 5.47636 11.1507 5.75532 11.5839 5.75532H15.4084C16.3771 5.75532 16.7799 6.99494 15.9962 7.56434L12.9021 9.81231C12.5516 10.0669 12.405 10.5183 12.5389 10.9303L13.7207 14.5676C14.02 15.4889 12.9656 16.2551 12.1818 15.6857L9.08779 13.4377C8.7373 13.1831 8.2627 13.1831 7.91222 13.4377L4.81815 15.6857C4.03444 16.2551 2.97996 15.4889 3.27931 14.5676L4.46114 10.9303C4.59501 10.5183 4.44835 10.0669 4.09787 9.81231L1.00381 7.56434C0.220092 6.99494 0.622867 5.75532 1.59159 5.75532H5.41606C5.84929 5.75532 6.23324 5.47636 6.36712 5.06434L7.54894 1.42705Z"
+                                                            fill="white" />
+                                                    </svg>
+                                                    <p class="font-t1 color--white">5.0</p>
+                                                </div>
+                                                <p class="font-t1 color--white">Отлично</p>
+                                            </div>
+                                        </div>
+                                        <p class="font-t1 sp-t-light-blue sp-b-burgundy">"Я приобрел стремянку в
+                                            магазине по производству лестниц и остался очень доволен своей покупкой.
+                                            Стремянка оказалась очень удобной и функциональной, идеально подходит для
+                                            использования как в домашних условиях, так и на профессиональном уровне.
+                                            Качество материалов и сборки оставляет только положительные впечатления,
+                                            стремянка крайне надежная и прочная."
+                                            "Магазин предоставил отличный сервис, продавец подробно проконсультировал
+                                            меня по всем возникшим вопросам и помог с выбором оптимальной модели.
+                                            Доставка была осуществлена вовремя, что не может не радовать.
+                                            Клиентоориентированный подход персонала вызывает только приятные эмоции."
+                                            "Один из главных плюсов этой стремянки - ее удобство. Лестница легко
+                                            складывается и занимает минимум места, что особенно важно для моей небольшой
+                                            квартиры. Кроме того, ступени прочно фиксируются, не скрипят и не шатаются,
+                                            что дает ощущение полной безопасности во время использования."
+                                        </p>
+                                        <div class="swiper mySwiper-product-standart">
+                                            <div class="swiper-wrapper">
+
+                                                <div class="swiper-slide">
+                                                    <div class="description-card__item">
+                                                        <div class="description-card__image">
+                                                            <img src="/assets/image/reviews_card_1.jpg" width="144"
+                                                                height="144" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="description-card__item">
+                                                        <div class="description-card__image">
+                                                            <img src="/assets/image/reviews_card_2.jpg" width="144"
+                                                                height="144" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="reviews-card__item">
+                                        <div class="reviews-card__top">
+                                            <div>
+                                                <p class="font-t1">Имя фамилия</p>
+                                                <p class="font-t2">25 марта в 13:28</p>
+                                            </div>
+                                            <div class="reviews-card__grade">
+                                                <div class="d-flex-center">
+                                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.54894 1.42705C7.8483 0.505742 9.1517 0.505739 9.45106 1.42705L10.6329 5.06434C10.7668 5.47636 11.1507 5.75532 11.5839 5.75532H15.4084C16.3771 5.75532 16.7799 6.99494 15.9962 7.56434L12.9021 9.81231C12.5516 10.0669 12.405 10.5183 12.5389 10.9303L13.7207 14.5676C14.02 15.4889 12.9656 16.2551 12.1818 15.6857L9.08779 13.4377C8.7373 13.1831 8.2627 13.1831 7.91222 13.4377L4.81815 15.6857C4.03444 16.2551 2.97996 15.4889 3.27931 14.5676L4.46114 10.9303C4.59501 10.5183 4.44835 10.0669 4.09787 9.81231L1.00381 7.56434C0.220092 6.99494 0.622867 5.75532 1.59159 5.75532H5.41606C5.84929 5.75532 6.23324 5.47636 6.36712 5.06434L7.54894 1.42705Z"
+                                                            fill="white" />
+                                                    </svg>
+                                                    <p class="font-t1 color--white">5.0</p>
+                                                </div>
+                                                <p class="font-t1 color--white">Отлично</p>
+                                            </div>
+                                        </div>
+                                        <p class="font-t1 sp-t-light-blue sp-b-burgundy">"Я приобрел стремянку в
+                                            магазине по производству лестниц и остался очень доволен своей покупкой.
+                                            Стремянка оказалась очень удобной и функциональной, идеально подходит для
+                                            использования как в домашних условиях, так и на профессиональном уровне.
+                                            Качество материалов и сборки оставляет только положительные впечатления,
+                                            стремянка крайне надежная и прочная."
+                                            "Магазин предоставил отличный сервис, продавец подробно проконсультировал
+                                            меня по всем возникшим вопросам и помог с выбором оптимальной модели.
+                                            Доставка была осуществлена вовремя, что не может не радовать.
+                                            Клиентоориентированный подход персонала вызывает только приятные эмоции."
+                                            "Один из главных плюсов этой стремянки - ее удобство. Лестница легко
+                                            складывается и занимает минимум места, что особенно важно для моей небольшой
+                                            квартиры. Кроме того, ступени прочно фиксируются, не скрипят и не шатаются,
+                                            что дает ощущение полной безопасности во время использования."
+                                        </p>
+                                        <div class="swiper mySwiper-product-standart">
+                                            <div class="swiper-wrapper">
+
+                                                <div class="swiper-slide">
+                                                    <div class="description-card__item">
+                                                        <div class="description-card__image">
+                                                            <img src="/assets/image/reviews_card_1.jpg" width="144"
+                                                                height="144" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="description-card__item">
+                                                        <div class="description-card__image">
+                                                            <img src="/assets/image/reviews_card_2.jpg" width="144"
+                                                                height="144" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <a class="sticky-link sticky-link--6 color-block--primary" href="#similar">
+            <div class="container">
+                <div class="col">
+                    <div class="sticky-link__block">
+                        <div class="sticky-link__li"></div>
+                        <h2 class="font-h3">Похожие товары</h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <section class="similar-card sp-b-fuchsia" id="similar">
+            <div class="container">
+
+                <div class="col">
+                    <div class="sp-v-mint">
+                        <div class="line"></div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="swiper mySwiper-product-card">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <!-- <div class="col-2 col-md-3 col-sm-3"> -->
+                                <div class="similar-card__item">
+                                    <div class="similar-card__image">
+                                        <img src="/assets/image/accessories_card_image.jpg" alt="">
+                                    </div>
+                                    <h3 class="font-s sp-t-dark-purple">Название аксессуара</h3>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+
+                            <div class="swiper-slide">
+                                <!-- <div class="col-2 col-md-3 col-sm-3"> -->
+                                <div class="similar-card__item">
+                                    <div class="similar-card__image">
+                                        <img src="/assets/image/accessories_card_image.jpg" alt="">
+                                    </div>
+                                    <h3 class="font-s sp-t-dark-purple">Название аксессуара</h3>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+
+                            <div class="swiper-slide">
+                                <!-- <div class="col-2 col-md-3 col-sm-3"> -->
+                                <div class="similar-card__item">
+                                    <div class="similar-card__image">
+                                        <img src="/assets/image/accessories_card_image.jpg" alt="">
+                                    </div>
+                                    <h3 class="font-s sp-t-dark-purple">Название аксессуара</h3>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <!-- <div class="col-2 col-md-3 col-sm-3"> -->
+                                <div class="similar-card__item">
+                                    <div class="similar-card__image">
+                                        <img src="/assets/image/accessories_card_image.jpg" alt="">
+                                    </div>
+                                    <h3 class="font-s sp-t-dark-purple">Название аксессуара</h3>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="write" id="form">
+            <div class="container">
+                <div class="write__wrapper sp-v-fuchsia">
+                    <div class="col-5 col-lg-6 col-md-6 col-sm-3">
+                        <div style="overflow: hidden;">
+                            <h2 class="animation-text font-h2 color--white sp-b-mint">Консультация менеджера</h2>
+                        </div>
+                        <p class="font-t1 color--white sp-b-light-blue">Если у вас возник вопрос или замечание, оставьте
+                            сообщение в форме обратной связи. Наш менеджер свяжется с вами в течение рабочего дня..</p>
+                        <p class="font-t1 color--white sp-b-light-blue">Благодарим вас за доверие к нашей продукции.</p>
+                        <!-- <p class="font-t1 color--white"></p> -->
+                    </div>
+                    <div class="col-1 d-none-lg"></div>
+                    <div class="col-4 col-lg-6 col-md-6 col-sm-3">
+                        <form class="form color-block--primary">
+                            <div class="form__top">
+                                <div class="form__group">
+                                    <input class="font-t1 color--secondary" type="text" id="name" name="name"
+                                        placeholder="Ваше имя" required>
+                                </div>
+                                <div class="form__group">
+                                    <input class="font-t1 color--secondary" type="email" id="email" name="email"
+                                        placeholder="E-mail" required>
+                                </div>
+                                <div class="form__group">
+                                    <input class="font-t1 color--secondary" type="tel" id="phone" name="phone"
+                                        placeholder="Ваш номер телефона" required>
+                                </div>
+                                <div class="form__group">
+                                    <textarea class="font-t1 color--secondary" id="message" name="message"
+                                        placeholder="Комментарий" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form__group-btn sp-t-mint">
+                                <div class="button-block">
+                                    <a href="/">
+                                        <div class="button-block__black-large">
+                                            <p class="font-t1 color--white">Отправить</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- <svg class="form__file" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="48" height="48" rx="24" fill="#4F4F4F" />
+                                    <g clip-path="url(#clip0_702_4856)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.4248 10.6667C14.7217 10.6667 13.333 12.0703 13.333 13.7917V34.2084C13.333 35.9298 14.7217 37.3334 16.4248 37.3334H31.5746C33.2777 37.3334 34.6663 35.9298 34.6663 34.2084V18.8957C34.6663 17.9271 34.2854 16.9976 33.6078 16.3127L29.0804 11.7367C28.4028 11.0518 27.4832 10.6667 26.5249 10.6667H16.4248ZM20.2116 18.323H27.787C28.7905 18.323 29.6161 19.1575 29.6161 20.1718V27.8285C29.6161 28.8428 28.7905 29.6772 27.787 29.6772H20.2116C19.2081 29.6772 18.3826 28.8428 18.3826 27.8285V20.1718C18.3826 19.1575 19.2081 18.323 20.2116 18.323Z"
+                                            fill="white" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M23.999 20.8748C23.8487 20.8748 23.7045 20.9351 23.5982 21.0426C23.4919 21.15 23.4322 21.2957 23.4322 21.4477V23.427H21.4741C21.3237 23.427 21.1795 23.4874 21.0732 23.5948C20.9669 23.7023 20.9072 23.848 20.9072 24C20.9072 24.1519 20.9669 24.2976 21.0732 24.4051C21.1795 24.5125 21.3237 24.5729 21.4741 24.5729H23.4322V26.5518C23.4322 26.7038 23.4919 26.8495 23.5982 26.957C23.7045 27.0644 23.8487 27.1248 23.999 27.1248C24.1493 27.1248 24.2935 27.0644 24.3998 26.957C24.5061 26.8495 24.5658 26.7038 24.5658 26.5518V24.5728H26.524C26.6743 24.5727 26.8184 24.5124 26.9247 24.4049C27.031 24.2975 27.0907 24.1518 27.0907 23.9999C27.0907 23.8479 27.031 23.7022 26.9247 23.5947C26.8184 23.4873 26.6742 23.4269 26.5239 23.4269H24.5658V21.4477C24.5658 21.2957 24.5061 21.15 24.3998 21.0426C24.2935 20.9351 24.1493 20.8748 23.999 20.8748Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_702_4856">
+                                            <rect width="32" height="32" fill="white" transform="translate(8 8)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg> -->
+
+                                <!-- Загрузка файла -->
+                                <label for="fileInput" class="form__file">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="48" height="48" rx="24" fill="#4F4F4F" />
+                                        <g clip-path="url(#clip0_702_4856)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M16.4248 10.6667C14.7217 10.6667 13.333 12.0703 13.333 13.7917V34.2084C13.333 35.9298 14.7217 37.3334 16.4248 37.3334H31.5746C33.2777 37.3334 34.6663 35.9298 34.6663 34.2084V18.8957C34.6663 17.9271 34.2854 16.9976 33.6078 16.3127L29.0804 11.7367C28.4028 11.0518 27.4832 10.6667 26.5249 10.6667H16.4248ZM20.2116 18.323H27.787C28.7905 18.323 29.6161 19.1575 29.6161 20.1718V27.8285C29.6161 28.8428 28.7905 29.6772 27.787 29.6772H20.2116C19.2081 29.6772 18.3826 28.8428 18.3826 27.8285V20.1718C18.3826 19.1575 19.2081 18.323 20.2116 18.323Z"
+                                                fill="white" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M23.999 20.8748C23.8487 20.8748 23.7045 20.9351 23.5982 21.0426C23.4919 21.15 23.4322 21.2957 23.4322 21.4477V23.427H21.4741C21.3237 23.427 21.1795 23.4874 21.0732 23.5948C20.9669 23.7023 20.9072 23.848 20.9072 24C20.9072 24.1519 20.9669 24.2976 21.0732 24.4051C21.1795 24.5125 21.3237 24.5729 21.4741 24.5729H23.4322V26.5518C23.4322 26.7038 23.4919 26.8495 23.5982 26.957C23.7045 27.0644 23.8487 27.1248 23.999 27.1248C24.1493 27.1248 24.2935 27.0644 24.3998 26.957C24.5061 26.8495 24.5658 26.7038 24.5658 26.5518V24.5728H26.524C26.6743 24.5727 26.8184 24.5124 26.9247 24.4049C27.031 24.2975 27.0907 24.1518 27.0907 23.9999C27.0907 23.8479 27.031 23.7022 26.9247 23.5947C26.8184 23.4873 26.6742 23.4269 26.5239 23.4269H24.5658V21.4477C24.5658 21.2957 24.5061 21.15 24.3998 21.0426C24.2935 20.9351 24.1493 20.8748 23.999 20.8748Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_702_4856">
+                                                <rect width="32" height="32" fill="white" transform="translate(8 8)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </label>
+                                <input type="file" id="fileInput" style="display: none;">
+                            </div>
+                            <p class="font-t2 color--hover sp-t-mint">Нажимая кнопку отправить я даю солгасие на
+                                обработку персноальных данных, в соответствии с условиями политики конфиденциальности и
+                                пользовательского соглашения</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer sp-t-orange sp-b-purple">
+
+            <!-- Меню -->
+            <div class="container d-none-md">
+                <div class="col">
+                    <div class="footer__menu">
+                        <a class="font-t1" href="/about.html">О компании</a>
+                        <a class="font-t1" href="/catalog.html">Специальные решения</a>
+                        <a class="font-t1" href="/clients.html">Клиентам</a>
+                        <a class="font-t1" href="/media.html">Медиацентр</a>
+                        <a class="font-t1" href="/info.html">Инфоцентр</a>
+                        <a class="font-t1" href="/projects.html">Выполненные проекты</a>
+                        <a class="font-t1" href="/purhases.html">Закупки</a>
+                        <a class="font-t1" href="/contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Линия -->
+            <div class="sp-t-burgundy sp-b-mint d-none-md">
+                <div class="line"></div>
+            </div>
+
+            <!-- Основная информайция -->
+            <div class="container">
+                <div class="footer__main">
+
+                    <div class="col-4 col-md-6 col-sm-3">
+                        <div class="footer__ul">
+                            <a href="/catalog.html#directions">
+                                <h4 class="font-h4 sp-b-mint">Продукция по направлениям</h4>
+                            </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Ж/д
+                                транспорт</a>
+                            <a class="font-s color--secondary sp-b-blue"
+                                href="/catalog.html#directions">Авиатранспорт</a>
+                            <a class="font-s color--secondary sp-b-blue"
+                                href="/catalog.html#directions">Автотранспорт</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Нефтегазовая
+                                отрасль</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Строительное
+                                оборудование</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Склады</a>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-md-6 col-sm-3">
+                        <div class="footer__ul">
+                            <a href="/catalog.html#serial">
+                                <h4 class="font-h4 sp-b-mint">Серийная продукция</h4>
+                            </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Стремянки</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Трансформеры</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Вышки-туры</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Помосты, малярные
+                                столы</a>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-md-6 col-sm-3">
+                        <a class="font-h4" href="tel:+78003337989">8 (800) 333−79–89</a>
+                        <p class="font-s sp-v-burgundy">188301, Ленинградская область, Гатчинский район, промышленная
+                            зона Корпиково, дом 2, помещение 108.</p>
+                        <div class="button-block">
+                            <a href="#form">
+                                <div class="button-block__red-large">
+                                    <p class="font-t1 color--white">Заказать звонок</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="footer__social sp-t-burgundy">
+                            <a href="https://zen.yandex.ru/id/60b890f6164d471f382fbbb4" target="_blank">
+                                <div class="footer__icon">
+                                    <img src="/assets/icon/icon_yandex_dzen.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCQADYyEXOntL2FnQH9lt_3g/" target="_blank">
+                                <div class="footer__icon">
+                                    <img src="/assets/icon/icon_youtube.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="https://vk.com/zavodnv" target="_blank">
+                                <div class="footer__icon">
+                                    <img src="/assets/icon/icon_vk.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="#" target="_blank">
+                                <div class="footer__icon">
+                                    <img src="/assets/icon/icon_premiere_rush.svg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Линия -->
+            <div class="sp-t-green sp-b-burgundy">
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
+                <div class="col">
+                    <div class="footer__bottom">
+                        <a class="font-t2 color--secondary" href="#">Политика конфиденциальности</a>
+                        <a class="font-t2 color--secondary" href="https://svsv.agency/" target="_blank">Разработка сайта
+                            Sivachёv & Sivachёv</a>
+                        <p class="font-t2 color--secondary">© 2024 Завод «Новая Высота»</p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="/script/script.js"></script>
+</body>
+
+</html>
